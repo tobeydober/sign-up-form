@@ -20,6 +20,9 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+* {
+    box-sizing: border-box;
+}
 
 :root {
     --half-of-screen: ;
@@ -31,6 +34,8 @@ time, mark, audio, video {
 #body{
     display: flex;
     flex-direction: row;
+    max-height: 100vh;
+
     
     
     
@@ -46,23 +51,45 @@ time, mark, audio, video {
 }
 
 .rightSide {
-    background-color: white;
     display: flex;
     flex-direction: column;
-    width: 65vw;
+    width: max(400px, 65vw);
+    font-family: var(--font1);
 }
 
 .rightSide > div {
-    height: 33%;
+    height: 33.3vh;
+    
 }
 
 .upper{
+    position: relative;
+    
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 7em 2em 0em 2em;
+    background-color: rgb(255, 255, 255);
+    
 }
 .middle {
     border-top: 0.5px black solid;
-    background-color: black;
+    box-shadow: 5px 5xp 10px;
+    z-index: 10;
+    background-color: rgb(247, 245, 241);
 }
 
 .bottom {
-    background-color: wheat;
+    background-color: rgb(255, 255, 255);
+}
+
+#formContainer {
+    padding-left: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
 }
